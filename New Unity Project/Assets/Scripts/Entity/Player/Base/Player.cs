@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Assets.Scripts.Entity.Base;
 using Assets.Scripts.Player.Base;
+using Assets.Scripts.Player.Base.PlayerComponent;
+using Assets.Scripts.Player.Base.PlayerCam;
+using Assets.Scripts.Entity.Base.Enity;
 
 
 
 namespace Assets.Scripts.Entity.Player.Base
 {
-    public class Player : Entity
+    public class Player : IEntity, IPlayer
     {
         private bool is2D;
 
@@ -54,3 +57,4 @@ namespace Assets.Scripts.Entity.Player.Base
         }
     }
 }
+*/
