@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assets.Scripts
 {
-    internal class _2DTopDownCam : Camera, IPlayerCam
+    internal class _2DTopDownCam : Camera
     {
         public void Start()
         {

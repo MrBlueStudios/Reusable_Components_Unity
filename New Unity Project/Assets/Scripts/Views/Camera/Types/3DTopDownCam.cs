@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Assets.Scripts.Player.Base;
+using Assets.Scripts.interfaces;
+using UnityEngine;
 
 namespace Assets.Scripts
 {
@@ -11,12 +12,20 @@ namespace Assets.Scripts
     {
         public void Start()
         {
-            throw new NotImplementedException();
+            // 
         }
 
         public void Update()
         {
             throw new NotImplementedException();
         }
+
+        private GameObject Player { get; set; }
+
+        public void ChangeCam()
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }
