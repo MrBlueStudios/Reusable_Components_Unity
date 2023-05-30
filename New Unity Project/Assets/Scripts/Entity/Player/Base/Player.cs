@@ -58,3 +58,19 @@ namespace Assets.Scripts.Entity.Player.Base
     }
 }
 */
+
+using Assets.Scripts.Entity.Base;
+using Assets.Scripts.Interfaces;
+
+public class Player : Entity
+{
+    protected override void Initialize()
+    {
+        base.Initialize();
+    }
+
+    protected override void Update()
+    {
+        base.Update();
+    }
+}

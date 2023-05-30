@@ -8,7 +8,8 @@ namespace Assets.Scripts.Entity.Base
 {
     internal interface IEntity
     {
-        void Initialize();
-        void Update();
+        protected void Initialize();
+        protected void Update();
+
     }
 }
