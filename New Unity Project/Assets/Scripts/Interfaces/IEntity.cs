@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Scripts.Entity.Base
+namespace Assets.Scripts.Entitys.Base
 {
     internal interface IEntity
     {

@@ -47,5 +47,17 @@ namespace Assets.Scripts.Input
             // keyboard move input
             return new Vector2(UnityEngine.Input.GetAxisRaw("Horizontal"), UnityEngine.Input.GetAxisRaw("Vertical"));
         }
+
+        // getsprint
+        public bool GetSprintInput()
+        {
+            return UnityEngine.Input.GetButton("Sprint");
+        }
+
+        // getcrouch
+        public bool GetCrouchInput()
+        {
+            return UnityEngine.Input.GetButton("Crouch");
+        }
     }
 }

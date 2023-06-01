@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using Assets.Scripts.Interfaces;
 using UnityEngine;
 
-public class ControllerInput : MonoBehaviour, IInputDevice{
+public class ControllerInput : MonoBehaviour, IInputDevice
+{ 
     // gethorizontal
     public float GetHorizontalInput()
     {
         // right joystick
-        return 
+        throw new System.NotImplementedException();
     }
 
     // getvertical
     public float GetVerticalInput()
     {
         // right joystick
-
+        throw new System.NotImplementedException();
     }
     // getjump
     public bool GetJumpInput()

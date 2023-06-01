@@ -6,7 +6,8 @@ using UnityEngine;
 internal class Camera : MonoBehaviour
 {
     // serialized fields
-    [SerializeField] private float sensitivity = 100f;
-    [SerializeField] private Transform playerBody;
+    [SerializeField] protected float sensitivity = 100f;
+    [SerializeField] protected Transform playerBody;
+    [SerializeField] protected Transform camera;
 
 }
