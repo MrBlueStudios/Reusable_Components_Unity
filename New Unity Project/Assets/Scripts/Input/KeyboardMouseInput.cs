@@ -20,7 +20,7 @@ namespace Assets.Scripts.Input
         // getjump
         public bool GetJumpInput()
         {
-            return UnityEngine.Input.GetButtonDown("Jump");
+            return UnityEngine.Input.GetButtonDown("JumpKey");
         }
 
         // getattack

@@ -14,6 +14,8 @@ namespace Assets.Scripts.Entitys.Player.Base
         // Get IInputDevice
         [SerializeField] private IInputDevice inputDevice;
 
+
+
         // get controller
         /*[SerializeField] private IController controller;*/
 

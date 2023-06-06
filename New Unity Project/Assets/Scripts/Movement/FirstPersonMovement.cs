@@ -6,16 +6,22 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Assets.Scripts;
 using Assets.Scripts.interfaces;
+using Assets.Scripts.Interfaces;
+using Assets.Scripts.Movement;
 
-public class FirstPersonMovement : MonoBehaviour
+internal class FirstPersonMovement : MovementBase
 {
     [Header("Movement")]
-    [SerializeField] private float speed = 12f;
+    /*[SerializeField] private float speed = 12f;*/
     [SerializeField] private Transform orientation;
-    /*[SerializeField] private float gravity = -9.81f;
-    [SerializeField] private float jumpHeight = 3f;
-    */
     [SerializeField] private float groundDrag;
+
+    [SerializeField] private float jumpForce;
+    [SerializeField] private float jumpCoolDown;
+    [SerializeField] private float airMulitplier;
+
+    [Header("Keybinds")]
+    [SerializeField] private KeyCode jumpKey = KeyCode.Space;
 
     [Header("Ground Check")]
     [SerializeField] private float playerHeight;
@@ -30,8 +36,11 @@ public class FirstPersonMovement : MonoBehaviour
 
     Rigidbody rb;
 
+    private IInputDevice inputDevice;
+
     private void Start()
     {
+        inputDevice = GetComponent<IInputDevice>();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     }
@@ -42,7 +51,7 @@ public class FirstPersonMovement : MonoBehaviour
         // ground check
         isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, groundMask);
 
-        MyInput();
+        MyInput(inputDevice);
         SpeedControl();
 
         // handle drag
@@ -56,26 +65,49 @@ public class FirstPersonMovement : MonoBehaviour
         }
     }
 
-    // fixed update
+    /*// fixed update
     private void FixedUpdate()
     {
         Move();
-    }
+    }*/
 
-    private void MyInput()
+    /*private void MyInput()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
-    }
+
+        // jump
+        if (Input.GetKeyDown(jumpKey))
+        {
+            Jump();
+        }
+    }*/
+
+    // get input
+    /*protected override void MyInput(IInputDevice inputDevice)
+    {
+        horizontalInput = inputDevice.GetMoveInputVector().x;
+        verticalInput = inputDevice.GetMoveInputVector().y;
+
+        // jump
+        if (inputDevice.GetJumpInput())
+        {
+            Jump();
+        }
+    }*/
 
     // move player
-    private void Move()
+    protected override void Move(Vector2 moveInput)
     {
-
         // calculate direction
-        moveDirection = transform.right * horizontalInput + transform.forward * verticalInput;
+        moveDirection = orientation.forward * moveInput.y + orientation.right * moveInput.x;
 
         rb.AddForce(moveDirection.normalized * speed * 10f, ForceMode.Force);
+
+        /*// calculate direction
+        moveDirection = transform.right * horizontalInput + transform.forward * verticalInput;
+
+        rb.AddForce(moveDirection.normalized * speed * 10f, ForceMode.Force);*/
     }
 
     private void SpeedControl()
@@ -87,6 +119,14 @@ public class FirstPersonMovement : MonoBehaviour
         {
             Vector3 limitedVelocity = flatVelocity.normalized * speed;
             rb.velocity = new Vector3(limitedVelocity.x, rb.velocity.y, limitedVelocity.z);
+        }
+    }
+
+    private void Jump()
+    {
+        if (isGrounded)
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
 }
