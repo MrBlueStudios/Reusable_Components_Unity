@@ -11,9 +11,9 @@ namespace Assets.Scripts
     public class test1
     {
         // Axplenation: 
-        public event Action onhealthempty = delegate { }
-        public action<float> onhealthchange = delegate { }
+        public event Action onhealthempty = delegate { };
+        public Action<float> onhealthchange = delegate { };
 
-        
+
     }
 }
