@@ -6,19 +6,14 @@ using System.Threading.Tasks;
 
 namespace Assets.Scripts
 {
-    public class test
+
+    // following class is for testing delegates
+    public class test1
     {
+        // Axplenation: 
+        public event Action onhealthempty = delegate { }
+        public action<float> onhealthchange = delegate { }
 
-    }
-    internal class test1
-    {
-        private delegate void testingprint();
-
-        private List<test> list = new();
-
-        private void test2()
-        {
-            
-        }
+        
     }
 }

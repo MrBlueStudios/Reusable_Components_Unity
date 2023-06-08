@@ -10,6 +10,9 @@ namespace Assets.Scripts.Interfaces
 {
     public class Entity : MonoBehaviour
     {
+        // serialized fields
+        [SerializeField] protected float health;
+
         protected virtual void Initialize()
         {
             Debug.Log("Entity Initialize");

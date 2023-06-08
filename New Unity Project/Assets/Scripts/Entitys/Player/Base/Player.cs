@@ -11,8 +11,6 @@ namespace Assets.Scripts.Entitys.Player.Base
     {
         // serialized fields
 
-        // Get IInputDevice
-        [SerializeField] private IInputDevice inputDevice;
 
 
 
