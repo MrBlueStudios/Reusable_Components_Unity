@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5710441523654409504}
   - component: {fileID: 3804739366488885453}
   - component: {fileID: 1661046896670719959}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3148361135083235426}
   - component: {fileID: 7483649563116320220}
   - component: {fileID: 3486033951370690304}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 3838618949373754694}
   - component: {fileID: 1796646069194546783}
   - component: {fileID: 1004490537165521258}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 1107946087318268142}
   - component: {fileID: 1888381977553371652}
   - component: {fileID: 2321468106895820076}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 8159883377232749339}
   - component: {fileID: 6638905339365246678}
   - component: {fileID: 2247562612799028566}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 7692934969029186748}
   - component: {fileID: 1091079239406442313}
   - component: {fileID: 5553765416888586753}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 6179489571596633915}
   - component: {fileID: 934222558543820204}
   - component: {fileID: 594033520366179094}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -592,7 +592,7 @@ GameObject:
   - component: {fileID: 4858562396854880318}
   - component: {fileID: 7976619093929372746}
   - component: {fileID: 7221203737996467823}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -673,7 +673,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3471089923070157266}
-  m_Layer: 0
+  - component: {fileID: -5092687015070296841}
+  - component: {fileID: 7794397732351741113}
+  m_Layer: 6
   m_Name: Wood_Railing_Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -705,6 +707,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &-5092687015070296841
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4278447444686584680}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!114 &7794397732351741113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4278447444686584680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f6be16025ec88e4c88efb60e6a61e8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allowOverlap: 1
+  offsetPosition: {x: 0, y: 0, z: 0}
+  rotationStep: {x: 0, y: 90, z: 0}
+  paintAreaStretch: 0
+  placementRaycast:
+    useRaycast: 0
+    direction: 1
+    startOffset: {x: 0, y: 0, z: 0}
+  randomizer:
+    useRandomizer: 0
+    allowReplacement: 0
+    replacementID: 0
+    replacementWeight: 0
+    allowSequentialRepeat: 0
+    rotateMin: {x: 0, y: -180, z: 0}
+    rotateMax: {x: 0, y: 180, z: 0}
+    rotateStep: {x: 1, y: 1, z: 1}
+    scaleMin: {x: 0.75, y: 0.75, z: 0.75}
+    scaleMax: {x: 1.25, y: 1.25, z: 1.25}
+    scaleLock: 1
+    flipX: 0
+    flipY: 0
+    flipZ: 0
+    posMin: {x: -0.5, y: -0.1, z: -0.5}
+    posMax: {x: 0.5, y: 0.1, z: 0.5}
+  includeInMerge: 1
 --- !u!1 &4556441498172430496
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,7 +770,7 @@ GameObject:
   - component: {fileID: 707232192944069719}
   - component: {fileID: 5811178186510645019}
   - component: {fileID: 7600365260665156701}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -799,7 +853,7 @@ GameObject:
   - component: {fileID: 3506685378609233926}
   - component: {fileID: 3789019595192706816}
   - component: {fileID: 2057225585162861411}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object7
   m_TagString: Untagged
   m_Icon: {fileID: 0}

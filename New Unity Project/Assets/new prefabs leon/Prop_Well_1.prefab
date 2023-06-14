@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6332097923681762730}
   - component: {fileID: 5499334689563215873}
   - component: {fileID: 2122731375569663577}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7033356512094016695}
   - component: {fileID: 6178133706046125372}
   - component: {fileID: 5536667117707517348}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 5756437828474358285}
   - component: {fileID: 5466678690369645835}
   - component: {fileID: 7189009117919359336}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 7345808720411150543}
   - component: {fileID: 811591869740853728}
   - component: {fileID: 6467957245761687687}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 8545670039380711004}
   - component: {fileID: 3453616276238089488}
   - component: {fileID: 1599109502273125974}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 4144450606295063743}
   - component: {fileID: 5399111115230607240}
   - component: {fileID: 1625779770385431700}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -511,7 +511,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5720433088389082073}
-  m_Layer: 0
+  - component: {fileID: 3349474159729970803}
+  - component: {fileID: -7758708314793901497}
+  m_Layer: 6
   m_Name: Prop_Well_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,6 +551,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &3349474159729970803
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4911420831304921443}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!114 &-7758708314793901497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4911420831304921443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f6be16025ec88e4c88efb60e6a61e8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allowOverlap: 1
+  offsetPosition: {x: 0, y: 0, z: 0}
+  rotationStep: {x: 0, y: 90, z: 0}
+  paintAreaStretch: 0
+  placementRaycast:
+    useRaycast: 0
+    direction: 1
+    startOffset: {x: 0, y: 0, z: 0}
+  randomizer:
+    useRandomizer: 0
+    allowReplacement: 0
+    replacementID: 0
+    replacementWeight: 0
+    allowSequentialRepeat: 0
+    rotateMin: {x: 0, y: -180, z: 0}
+    rotateMax: {x: 0, y: 180, z: 0}
+    rotateStep: {x: 1, y: 1, z: 1}
+    scaleMin: {x: 0.75, y: 0.75, z: 0.75}
+    scaleMax: {x: 1.25, y: 1.25, z: 1.25}
+    scaleLock: 1
+    flipX: 0
+    flipY: 0
+    flipZ: 0
+    posMin: {x: -0.5, y: -0.1, z: -0.5}
+    posMax: {x: 0.5, y: 0.1, z: 0.5}
+  includeInMerge: 1
 --- !u!1 &5526344314425249172
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,7 +614,7 @@ GameObject:
   - component: {fileID: 2105599447875744193}
   - component: {fileID: 4221541671541929654}
   - component: {fileID: 8223411681340616672}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -643,7 +697,7 @@ GameObject:
   - component: {fileID: 4334101883145781813}
   - component: {fileID: 1295456406049695297}
   - component: {fileID: 1981048353694815332}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -727,7 +781,7 @@ GameObject:
   - component: {fileID: 3065037609255636272}
   - component: {fileID: 8340596169431564199}
   - component: {fileID: 8608252627194698013}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -810,7 +864,7 @@ GameObject:
   - component: {fileID: 1552068317704937143}
   - component: {fileID: 8101004554256342338}
   - component: {fileID: 3628272140142565386}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -893,7 +947,7 @@ GameObject:
   - component: {fileID: 1041876069361658128}
   - component: {fileID: 2552106445358615773}
   - component: {fileID: 6951363443199784797}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -976,7 +1030,7 @@ GameObject:
   - component: {fileID: 8081974967513195237}
   - component: {fileID: 7312762871569123343}
   - component: {fileID: 6881294074443599655}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1059,7 +1113,7 @@ GameObject:
   - component: {fileID: 5335998003542751053}
   - component: {fileID: 7468725638768874580}
   - component: {fileID: 8266476564534037345}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1142,7 +1196,7 @@ GameObject:
   - component: {fileID: 5630985534332647285}
   - component: {fileID: 1110898874336238351}
   - component: {fileID: 8167456328520062028}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1226,7 +1280,7 @@ GameObject:
   - component: {fileID: 6123206319153521257}
   - component: {fileID: 1770906213930024919}
   - component: {fileID: 5703851919491740939}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1309,7 +1363,7 @@ GameObject:
   - component: {fileID: 3492354862666299179}
   - component: {fileID: 5442002267284259526}
   - component: {fileID: 7513692113981683164}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object10
   m_TagString: Untagged
   m_Icon: {fileID: 0}

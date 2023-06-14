@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4900955195130840082}
   - component: {fileID: 4628788039057597204}
   - component: {fileID: 7504462389569683319}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 4018508082047175722}
   - component: {fileID: 1881145375149811806}
   - component: {fileID: 1197765666517473915}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 9041285093930866755}
   - component: {fileID: 2597729024760967951}
   - component: {fileID: 2148327948237942857}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4936586110960051654}
-  m_Layer: 0
+  - component: {fileID: -5243182051601062106}
+  - component: {fileID: 4726954388064437801}
+  m_Layer: 6
   m_Name: Stone_Sewer_Grate_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,6 +290,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &-5243182051601062106
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749291623223066492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!114 &4726954388064437801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749291623223066492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f6be16025ec88e4c88efb60e6a61e8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allowOverlap: 1
+  offsetPosition: {x: 0, y: 0, z: 0}
+  rotationStep: {x: 0, y: 90, z: 0}
+  paintAreaStretch: 0
+  placementRaycast:
+    useRaycast: 0
+    direction: 1
+    startOffset: {x: 0, y: 0, z: 0}
+  randomizer:
+    useRandomizer: 0
+    allowReplacement: 0
+    replacementID: 0
+    replacementWeight: 0
+    allowSequentialRepeat: 0
+    rotateMin: {x: 0, y: -180, z: 0}
+    rotateMax: {x: 0, y: 180, z: 0}
+    rotateStep: {x: 1, y: 1, z: 1}
+    scaleMin: {x: 0.75, y: 0.75, z: 0.75}
+    scaleMax: {x: 1.25, y: 1.25, z: 1.25}
+    scaleLock: 1
+    flipX: 0
+    flipY: 0
+    flipZ: 0
+    posMin: {x: -0.5, y: -0.1, z: -0.5}
+    posMax: {x: 0.5, y: 0.1, z: 0.5}
+  includeInMerge: 1
 --- !u!1 &6706211672746771640
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,7 +353,7 @@ GameObject:
   - component: {fileID: 2407308189479584559}
   - component: {fileID: 8673521092893569464}
   - component: {fileID: 8977892166180771586}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +436,7 @@ GameObject:
   - component: {fileID: 2191921051456508072}
   - component: {fileID: 8902989487281378141}
   - component: {fileID: 4160058550268204565}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -465,7 +519,7 @@ GameObject:
   - component: {fileID: 6852427806839041142}
   - component: {fileID: 1401407481692844488}
   - component: {fileID: 4956614248735767316}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -548,7 +602,7 @@ GameObject:
   - component: {fileID: 4750185545008626002}
   - component: {fileID: 7802335832586525259}
   - component: {fileID: 8744061791712068990}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -631,7 +685,7 @@ GameObject:
   - component: {fileID: 402005363588392719}
   - component: {fileID: 2921620330241917634}
   - component: {fileID: 7753365967068723522}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object8
   m_TagString: Untagged
   m_Icon: {fileID: 0}

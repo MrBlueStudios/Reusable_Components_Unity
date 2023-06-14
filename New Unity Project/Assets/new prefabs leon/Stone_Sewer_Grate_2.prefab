@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7823701618277056926}
   - component: {fileID: 7542453853413074584}
   - component: {fileID: 4662873968610966267}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3243957722928931459}
   - component: {fileID: 7672207778875214}
   - component: {fileID: 4830553323626527950}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 8613232331924892154}
   - component: {fileID: 4315050214781940804}
   - component: {fileID: 7807413845632515736}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 7601200371209583838}
   - component: {fileID: 4960601718182354887}
   - component: {fileID: 5893463946689298674}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 6190750746248748495}
   - component: {fileID: 908622303656801923}
   - component: {fileID: 3837219722758763973}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +424,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7787472569196224586}
-  m_Layer: 0
+  - component: {fileID: 9038259036493025959}
+  - component: {fileID: 4237322559397028119}
+  m_Layer: 6
   m_Name: Stone_Sewer_Grate_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,6 +456,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &9038259036493025959
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7447117213304781552}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!114 &4237322559397028119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7447117213304781552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f6be16025ec88e4c88efb60e6a61e8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allowOverlap: 1
+  offsetPosition: {x: 0, y: 0, z: 0}
+  rotationStep: {x: 0, y: 90, z: 0}
+  paintAreaStretch: 0
+  placementRaycast:
+    useRaycast: 0
+    direction: 1
+    startOffset: {x: 0, y: 0, z: 0}
+  randomizer:
+    useRandomizer: 0
+    allowReplacement: 0
+    replacementID: 0
+    replacementWeight: 0
+    allowSequentialRepeat: 0
+    rotateMin: {x: 0, y: -180, z: 0}
+    rotateMax: {x: 0, y: 180, z: 0}
+    rotateStep: {x: 1, y: 1, z: 1}
+    scaleMin: {x: 0.75, y: 0.75, z: 0.75}
+    scaleMax: {x: 1.25, y: 1.25, z: 1.25}
+    scaleLock: 1
+    flipX: 0
+    flipY: 0
+    flipZ: 0
+    posMin: {x: -0.5, y: -0.1, z: -0.5}
+    posMax: {x: 0.5, y: 0.1, z: 0.5}
+  includeInMerge: 1
 --- !u!1 &7841078593672468872
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,7 +519,7 @@ GameObject:
   - component: {fileID: 2257557046999763366}
   - component: {fileID: 3642220380732583378}
   - component: {fileID: 4039656727598227447}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,7 +603,7 @@ GameObject:
   - component: {fileID: 718488964922427043}
   - component: {fileID: 5822704179280081972}
   - component: {fileID: 6054824410263261838}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -632,7 +686,7 @@ GameObject:
   - component: {fileID: 3961948821237830948}
   - component: {fileID: 5988989430082115281}
   - component: {fileID: 1237241775576093593}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: object3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
