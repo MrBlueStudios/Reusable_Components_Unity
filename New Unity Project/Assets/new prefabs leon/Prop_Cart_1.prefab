@@ -923,7 +923,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2973878436900208855}
-  - component: {fileID: 8817194745749935819}
   - component: {fileID: 1022868232087494539}
   m_Layer: 6
   m_Name: Prop_Cart_1
@@ -983,20 +982,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &8817194745749935819
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2454046190213388909}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!114 &1022868232087494539
 MonoBehaviour:
   m_ObjectHideFlags: 0

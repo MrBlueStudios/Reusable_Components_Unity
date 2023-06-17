@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2424407921009413288}
-  - component: {fileID: 6484989472537033000}
   - component: {fileID: 6150309840686967196}
   m_Layer: 6
   m_Name: Canopy_Beam
@@ -34,20 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &6484989472537033000
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3093667847257757202}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!114 &6150309840686967196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,6 +82,7 @@ GameObject:
   - component: {fileID: 1755951005943918893}
   - component: {fileID: 4695987816081332833}
   - component: {fileID: 8716462146282215719}
+  - component: {fileID: 2182696643999118536}
   m_Layer: 6
   m_Name: object1
   m_TagString: Untagged
@@ -169,3 +155,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2182696643999118536
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3365676193793357274}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1103882761297548365, guid: f1dabebaf2008cb4db06109b9fc5ea6d, type: 3}
