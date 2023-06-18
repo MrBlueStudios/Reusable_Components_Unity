@@ -82,6 +82,7 @@ GameObject:
   - component: {fileID: 1962067470660907695}
   - component: {fileID: 1716432808015809220}
   - component: {fileID: 7122828908521910029}
+  - component: {fileID: 2670521491732492187}
   m_Layer: 6
   m_Name: flume_support_brace
   m_TagString: Untagged
@@ -154,3 +155,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2670521491732492187
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6918409787853243148}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6200505207088552807, guid: b6c42d0dcbe544f4c90c1a73cc05a5aa, type: 3}

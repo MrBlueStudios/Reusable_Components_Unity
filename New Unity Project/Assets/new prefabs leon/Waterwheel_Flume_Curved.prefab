@@ -82,6 +82,7 @@ GameObject:
   - component: {fileID: 538149616418019062}
   - component: {fileID: 2699048404552025678}
   - component: {fileID: 8743172582395948669}
+  - component: {fileID: 2661266935501457548}
   m_Layer: 6
   m_Name: flume_corner
   m_TagString: Untagged
@@ -155,3 +156,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2661266935501457548
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5803569578018676941}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5601100064619250570, guid: a5dab55550ab90b4abfa3c5effa63671, type: 3}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8804026936395283635}
   - component: {fileID: 8524566402788685547}
   - component: {fileID: 2650751469415267851}
+  - component: {fileID: 3252875495607173833}
   m_Layer: 6
   m_Name: flume_end
   m_TagString: Untagged
@@ -84,6 +85,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3252875495607173833
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2626185567857869045}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3739659657399278821, guid: 99a7bb8a95b449847b69a446b4e50b2c, type: 3}
 --- !u!1 &6847194342942286758
 GameObject:
   m_ObjectHideFlags: 0

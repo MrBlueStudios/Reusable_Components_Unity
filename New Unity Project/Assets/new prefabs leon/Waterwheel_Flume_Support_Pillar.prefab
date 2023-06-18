@@ -82,6 +82,7 @@ GameObject:
   - component: {fileID: 4264785912773105466}
   - component: {fileID: 2477271100671542965}
   - component: {fileID: 5906053755829926849}
+  - component: {fileID: 3882921539901179096}
   m_Layer: 6
   m_Name: flume_support_pillar
   m_TagString: Untagged
@@ -154,3 +155,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3882921539901179096
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5443451912214832534}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 1, z: 0.2}
+  m_Center: {x: 0, y: 0.5, z: 0}
