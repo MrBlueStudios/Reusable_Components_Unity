@@ -4,29 +4,16 @@ using Assets.Scripts.Interfaces;
 using UnityEngine;
 // interfaces
 using Assets.Scripts.Interfaces;
+using Assets.Scripts.Movement;
 
 namespace Assets.Scripts.Entitys.Player.Base
 {
     public class Player : Entity
     {
-        // serialized fields
+        // controller reference
+        [SerializeField] private IInputDevice inputDevice;
+        // movement reference
+        [SerializeField] private MovementBase movement;
 
-
-
-
-        // get controller
-        /*[SerializeField] private IController controller;*/
-
-        protected override void Initialize()
-        {
-            
-
-            base.Initialize();
-        }
-
-        protected override void Update()
-        {
-            base.Update();
-        }
     }
 }

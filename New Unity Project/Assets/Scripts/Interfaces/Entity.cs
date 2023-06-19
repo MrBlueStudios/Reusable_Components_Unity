@@ -10,17 +10,28 @@ namespace Assets.Scripts.Interfaces
 {
     public class Entity : MonoBehaviour
     {
-        // serialized fields
-        [SerializeField] protected float health;
+        [Header("Object to face")]
+        [SerializeField] private Transform facePosition;
 
-        protected virtual void Initialize()
+        private void Update()
         {
-            Debug.Log("Entity Initialize");
+            if (this.facePosition != null)
+            {
+                FacePosition(facePosition.position);
+            }
         }
 
-        protected virtual void Update()
+        private void FacePosition(Vector3 targetPosition)
         {
+            Vector3 direction = targetPosition - transform.position;
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+            transform.rotation = targetRotation;
+        }
 
+        // set face position protected
+        protected void SetFacePosition(Transform facePosition)
+        {
+            this.facePosition = facePosition;
         }
     }
 }

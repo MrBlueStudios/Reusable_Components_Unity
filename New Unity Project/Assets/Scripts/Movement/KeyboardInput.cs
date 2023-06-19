@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Assets.Scripts.Movement
 {
-    internal interface KeyboardInput : IPlayerInput
+    public class KeyboardInput : IPlayerInput
     {
-        // get movement input
-
+        Vector3 IPlayerInput.GetMovementInput()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
