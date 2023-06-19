@@ -242,8 +242,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2965479386087130805}
   - component: {fileID: -4110953021780560373}
-  - component: {fileID: 2855412177918977118}
-  - component: {fileID: 7621064939426239917}
+  - component: {fileID: 4559667639614869760}
+  - component: {fileID: 4612471747229436832}
   m_Layer: 6
   m_Name: Prop_Crate_1
   m_TagString: Untagged
@@ -311,7 +311,7 @@ MonoBehaviour:
     posMin: {x: -0.5, y: -0.1, z: -0.5}
     posMax: {x: 0.5, y: 0.1, z: 0.5}
   includeInMerge: 1
---- !u!65 &2855412177918977118
+--- !u!65 &4559667639614869760
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -324,7 +324,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!54 &7621064939426239917
+--- !u!54 &4612471747229436832
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
