@@ -23,6 +23,7 @@ public class NPC : Entity
         {
             // Perform NPC action when player is in range
             DoSomething();
+            
         }
 
         // Perform other NPC logic...
