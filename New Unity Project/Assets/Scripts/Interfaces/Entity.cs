@@ -9,7 +9,5 @@ using UnityEngine;
 
 namespace Assets.Scripts.Interfaces
 {
-    public class Entity : FaceTowards
-    {
-    }
+    // all entities face towards something
 }

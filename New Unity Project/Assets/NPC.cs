@@ -12,19 +12,10 @@ public class NPC : Entity, IInteractable
 
     private Player playerComponent;
 
-    public InteractionArea InteractionArea {
-        get => InteractionArea;
-        set
-        {
-            if (value != null)
-            {
-                // 
-            }
-        }
-    }
+    public InteractionArea InteractionArea { get; set; }
 
     // get interactionArea
-
+    
 
     private void Start()
     {
@@ -78,6 +69,6 @@ public class NPC : Entity, IInteractable
 
     void IInteractable.Interact()
     {
-        throw new System.NotImplementedException();
+        // if 
     }
 }

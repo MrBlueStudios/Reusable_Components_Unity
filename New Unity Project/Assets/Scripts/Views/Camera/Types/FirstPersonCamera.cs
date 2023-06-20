@@ -5,7 +5,7 @@ using Assets.Scripts;
 using Assets.Scripts.interfaces;
 using UnityEngine;
 
-internal class FirstPersonCamera : Camera, IPlayerCam, IPlayerComponent
+internal class FirstPersonCamera : IPlayerCam, IPlayerComponent
 {
     // serialized fields
     //[SerializeField] private float sensitivity = 100f;
@@ -13,6 +13,8 @@ internal class FirstPersonCamera : Camera, IPlayerCam, IPlayerComponent
 
     private float xRotation = 0f;
     private float yRotation = 0f;
+
+    private Camera camera;
     
 
     // Start is called before the first frame update

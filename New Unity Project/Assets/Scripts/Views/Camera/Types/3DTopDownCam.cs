@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    internal class _3DTopDownCam : Camera, IPlayerCam, IPlayerComponent
+    internal class _3DTopDownCam : IPlayerCam, IPlayerComponent
     {
         public void Start()
         {

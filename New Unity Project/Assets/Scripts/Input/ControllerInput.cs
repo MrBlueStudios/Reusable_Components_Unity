@@ -2,22 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts.Interfaces;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class ControllerInput : MonoBehaviour, IInputDevice
-{ 
-    // gethorizontal
-    public float GetHorizontalInput()
-    {
-        // right joystick
-        throw new System.NotImplementedException();
-    }
-
-    // getvertical
-    public float GetVerticalInput()
-    {
-        // right joystick
-        throw new System.NotImplementedException();
-    }
+{
+    
     // getjump
     public bool GetJumpInput()
     {
@@ -45,7 +34,7 @@ public class ControllerInput : MonoBehaviour, IInputDevice
     // getmoveinputvector
     public Vector2 GetMoveInputVector()
     {
-        return new Vector2(GetHorizontalInput(), GetVerticalInput());
+        return new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
     }
 
     // getsprint
@@ -59,4 +48,18 @@ public class ControllerInput : MonoBehaviour, IInputDevice
     {
         return Input.GetButton("Crouch");
     }
+
+    public float GetHorizontalInput()
+    {
+        throw new System.NotImplementedException();
+        
+    }
+
+    public float GetVerticalInput()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    // get left joystick
+
 }

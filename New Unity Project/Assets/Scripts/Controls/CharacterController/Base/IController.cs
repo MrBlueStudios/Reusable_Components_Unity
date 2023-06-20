@@ -8,5 +8,6 @@ namespace Assets.Scripts.Player.CharacterController.Base
 {
     internal interface IController
     {
+
     }
 }
