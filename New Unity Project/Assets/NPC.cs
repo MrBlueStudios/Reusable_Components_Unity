@@ -1,15 +1,30 @@
 using Assets.Scripts.Entitys.Player.Base;
+using Assets.Scripts.Interaction;
 using Assets.Scripts.Interfaces;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPC : Entity
+public class NPC : Entity, IInteractable
 {
     [SerializeField] private string npcName;
     [SerializeField] private float detectionRange = 10f;
 
     private Player playerComponent;
+
+    public InteractionArea InteractionArea {
+        get => InteractionArea;
+        set
+        {
+            if (value != null)
+            {
+                // 
+            }
+        }
+    }
+
+    // get interactionArea
+
 
     private void Start()
     {
@@ -53,5 +68,16 @@ public class NPC : Entity
     {
         // Add your NPC's action code here
         Debug.Log("NPC is doing something because the player is in range.");
+    }
+
+    public void Interact()
+    {
+        // debug intereract
+        Debug.Log("Interact with NPC");
+    }
+
+    void IInteractable.Interact()
+    {
+        throw new System.NotImplementedException();
     }
 }
