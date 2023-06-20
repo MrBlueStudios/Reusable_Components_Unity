@@ -3,38 +3,38 @@ using System.Collections.Generic;
 using Assets.Scripts.Atributes;
 using Assets.Scripts.Interfaces;
 using UnityEngine;
-// interfaces
-using Assets.Scripts.Interfaces;
 using Assets.Scripts.Movement;
 
 namespace Assets.Scripts.Entitys.Player.Base
 {
     public class Player : Entity
     {
-        // controller reference
-        [SerializeField] private IInputDevice inputDevice;
-        // movement reference
-        [SerializeField] private MovementBase movement;
-        // camera reference
-        [SerializeField] private IPlayerCam playerCam;
-        // health reference
-        [SerializeField] private Health health;
+        // fields
+        [Header("Player")]  
+        // name
+        [SerializeField] private string playerName;
+        // list of achievements
+        [SerializeField] private List<MyAchievement> achievements;
+        
 
-        // start
-        private void Start()
+        // check if player has movement and a IPlayerCam attached
+        private void Awake()
         {
-            // get components
-            inputDevice = GetComponent<IInputDevice>();
-            movement = GetComponent<MovementBase>();
-            playerCam = GetComponent<IPlayerCam>();
-            health = GetComponent<Health>();
-        }
-
-        // update
-        private void Update()
-        {
-            // get input
-            //movement.MyInput(inputDevice);
+            if (GetComponent<IInputDevice>() == null)
+            {
+                // throw error
+                throw new System.Exception("Player: " + playerName + " has no IInputDevice script attached");
+            }
+            if (GetComponent<MovementBase>() == null)
+            {
+                // throw error
+                throw new System.Exception("Player: " + playerName + " has no MovementBase script attached");
+            }
+            if (GetComponent<IPlayerCam>() == null)
+            {
+                // throw error
+                throw new System.Exception("Player: " + playerName + " has no IPlayerCam script attached");
+            }
         }
 
     }

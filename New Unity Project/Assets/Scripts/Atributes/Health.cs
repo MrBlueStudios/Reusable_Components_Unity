@@ -8,7 +8,7 @@ using UnityEngine;
 namespace Assets.Scripts.Atributes
 {
     // health class using delegates and events
-    public class Health
+    public class Health : MonoBehaviour
     {
         // fields
         [SerializeField] private float health;
@@ -34,6 +34,8 @@ namespace Assets.Scripts.Atributes
                 OnMaxHealthChanged?.Invoke(maxHealth);
             }
         }
+
+        // u can use these events by typing: OnHealthChanged += (float health) => { Debug.Log(health); };
                                                                         //     _____________________________________________________________________________________________________
                                                                         //     |NOTES|                                                                                             |
         // events                                                       //     |[1]:delegate { } is an empty delegate. It is used to prevent null reference exceptions.            |
@@ -42,23 +44,44 @@ namespace Assets.Scripts.Atributes
                                                                         //     |[3]:The Invoke method is used to invoke the methods in the invocation list of a delegate instance. |
                                                                         //     |    The methods are invoked in the same order in which they are added to the invocation list.      |
                                                                         //     |___________________________________________________________________________________________________|
+                                                                        
+        //protected OnDeath  delegate
+        protected event Action OnDeath = delegate { };
+
         // constructor
 
         private Health()
         {
             this.health = health;
             this.maxHealth = maxHealth;
+            OnDeath += Died;
         }
 
         // methods
         protected void Heal(float amount)
         {
             HealthValue += amount;
+            HealthValue = Mathf.Clamp(HealthValue, 0f, MaxHealth);
         }
-
+            
         protected void Damage(float amount)
         {
             HealthValue -= amount;
+            HealthValue = Mathf.Clamp(HealthValue, 0f, MaxHealth);
+
+            if (HealthValue <= 0f)
+            {
+                OnDeath?.Invoke();
+            }
+        }
+
+        private void Died()
+        {
+            // destroy this
+            Debug.Log("Died");
+
+            // destroy parant gameobject
+            Destroy(this.transform.parent.gameObject);
         }
     }
 }
