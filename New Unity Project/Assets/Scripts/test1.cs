@@ -6,13 +6,20 @@ using System.Threading.Tasks;
 
 namespace Assets.Scripts
 {
-
-    // following class is for testing delegates
+    using UnityEngine;
+    // following class is for testing inspector attributes
     public class test1
     {
-        // Axplenation: 
-        public event Action onhealthempty = delegate { };
-        public Action<float> onhealthchange = delegate { };
+        // This integer will be shown as a slider,
+        // with the range of 1 to 6 in the Inspector
+        [Range(1, 6)]
+        public int sliderInt;
+        // this can also be used for floats
+        [Range(1, 6)]
+        public float sliderFloat;
+
+
+
 
 
     }

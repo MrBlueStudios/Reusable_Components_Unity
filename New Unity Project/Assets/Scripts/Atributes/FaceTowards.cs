@@ -13,16 +13,13 @@ namespace Assets.Scripts.Atributes
         [Header("Object to face")]
         [SerializeField] private Transform target;
 
-        private void Update()
+        private void LateUpdate()// late 
         {
             if (target != null)
             {
                 Vector3 direction = target.position - transform.position;
                 transform.rotation = Quaternion.LookRotation(direction);
             }
-        }
-
-        
-        
+        }        
     }
 }
