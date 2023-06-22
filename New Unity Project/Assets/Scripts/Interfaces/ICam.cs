@@ -15,5 +15,11 @@ namespace Assets.Scripts
         Transform FollowTarget { get; set; }
 
         IInputDevice InputDevice { get; set; }
+
+        // when changing from cam animation zooming in a sertain direction
+        void ChangeCamera(ICam cam, Vector3 direction);
+
+        // when becoming the active camera
+        void OnBecomeActive(Vector3 direction);
     }
 }

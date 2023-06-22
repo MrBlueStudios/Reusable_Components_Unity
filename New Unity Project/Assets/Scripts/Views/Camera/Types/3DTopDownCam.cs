@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    internal class _3DTopDownCam : ICam, IPlayerComponent
+    internal class _3DTopDownCam : ICam
     {
         public void Start()
         {
@@ -30,5 +30,14 @@ namespace Assets.Scripts
             throw new NotImplementedException();
         }
 
+        public void ChangeCamera(ICam cam, Vector3 direction)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnBecomeActive(Vector3 direction)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

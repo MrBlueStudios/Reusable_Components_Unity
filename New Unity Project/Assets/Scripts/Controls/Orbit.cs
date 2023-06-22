@@ -188,6 +188,14 @@ namespace Assets.Scripts.Controls
             Gizmos.DrawSphere(FollowTarget.position, 0.5f);
         }
 
+        public void ChangeCamera(ICam cam, Vector3 direction)
+        {
+            throw new NotImplementedException();
+        }
 
+        public void OnBecomeActive(Vector3 direction)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

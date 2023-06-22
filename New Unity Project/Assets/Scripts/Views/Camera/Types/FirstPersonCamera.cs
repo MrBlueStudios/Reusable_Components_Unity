@@ -1,55 +1,75 @@
-/*using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts;
 using Assets.Scripts.interfaces;
+using Assets.Scripts.Interfaces;
 using UnityEngine;
 
-internal class FirstPersonCamera : IPlayerCam, IPlayerComponent
+namespace Assets.Scripts.Views.Camera.Types
 {
-    // serialized fields
-    //[SerializeField] private float sensitivity = 100f;
-    [SerializeField] private Transform orientation;
-
-    private float xRotation = 0f;
-    private float yRotation = 0f;
-
-    private Camera camera;
-    
-
-    // Start is called before the first frame update
-    public void Start()
+    using UnityEngine;
+    public class FirstPersonCamera : MonoBehaviour, ICam
     {
-        // lock cursor to center of screen
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // serialized fields
+        //[SerializeField] private float sensitivity = 100f;
+        [SerializeField] private Transform orientation;
+
+        private float xRotation = 0f;
+        private float yRotation = 0f;
+
+        private Camera camera;
+
+        public Transform FollowTarget { get; set; }
+        public IInputDevice InputDevice { get; set; }
+
+        [SerializeField] private IInputDevice _inputDevice;
+
+        [SerializeField] private Transform _followTarget;
+
+        // Start is called before the first frame update
+        public void Start()
+        {
+            // lock cursor to center of screen
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+
+            camera = Camera.main;
+
+            // get input device
+            if (_inputDevice == null){_inputDevice = InputDevice;}
+            if (_followTarget == null) { _followTarget = FollowTarget;}
+
+        }
+
+        // Update is called once per frame
+        public void Update()
+        {
+            // get input
+            float mouseX = _inputDevice.GetHorizontalInput();
+            float mouseY = _inputDevice.GetVerticalInput();
+
+            // calculate rotation
+            xRotation -= mouseY;
+            yRotation += mouseX;
+
+            camera = Camera.main;
+            camera.transform.position = FollowTarget.position;
+            camera.transform.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
+
+            // clamp rotation
+            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        }
+
+        public void ChangeCamera(ICam cam, Vector3 direction)
+        {
+            // 
+        }
+
+        public void OnBecomeActive(Vector3 direction)
+        {
+            throw new NotImplementedException();
+        }
     }
-
-    // Update is called once per frame
-    public void Update()
-    {
-        // move camera so it follows the player
-        this.camera.position = this.playerBody.position;
-        // get mouse input
-        float mouseX = Input.GetAxis("Mouse X") * this.sensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * this.sensitivity * Time.deltaTime;
-
-        xRotation -= mouseY;
-        yRotation += mouseX;
-
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-
-        transform.localRotation = Quaternion.Euler(xRotation, yRotation, 0f);
-        this.playerBody.rotation = Quaternion.Euler(0f, yRotation, 0f);
-    }
-
-    // change cam
-    public void ChangeCam()
-    {
-        // change cam to 3D top down cam
-        throw new System.NotImplementedException();
-
-    }
-
 }
-*/
+

@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Views.Camera.Types
 {
-    public class ThirdPersonMovement : MonoBehaviour, ICam
+    /*public class ThirdPersonMovement : MonoBehaviour
     {
         [SerializeField] private float speed = 5f;
         [SerializeField] private float turnSmoothTime = 0.1f;
@@ -16,8 +16,7 @@ namespace Assets.Scripts.Views.Camera.Types
         private float turnSmoothVelocity;
 
         public Transform FollowTarget { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-        Transform ICam.FollowTarget { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
-        IInputDevice ICam.InputDevice { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+
 
         private void Start()
         {
@@ -43,10 +42,20 @@ namespace Assets.Scripts.Views.Camera.Types
                 rb.MovePosition(rb.position + moveDirection.normalized * speed * Time.fixedDeltaTime);
             }
         }
-    }
+
+        public void ChangeCamera(ICam cam, Vector3 direction)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void OnBecomeActive(Vector3 direction)
+        {
+            throw new System.NotImplementedException();
+        }
+    }*/
 
     // new third person cam
-    public class ThirdPersonCam2 : FaceTowards, ICam
+    public class ThirdPersonCam : FaceTowards, ICam
     {
         // header
         [Header("Camera Settings")][SerializeField]
@@ -62,6 +71,16 @@ namespace Assets.Scripts.Views.Camera.Types
         public Transform FollowTarget { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
         Transform ICam.FollowTarget { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
         IInputDevice ICam.InputDevice { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+
+        public void ChangeCamera(ICam cam, Vector3 direction)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void OnBecomeActive(Vector3 direction)
+        {
+            throw new System.NotImplementedException();
+        }
 
         // make a ThirdPersonCamera That uses the FaceTowards script to face the player(which is already made). The ThirdPersonCamera should also implement an interface called IPlayerCam 
 
