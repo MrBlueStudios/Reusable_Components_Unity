@@ -10,7 +10,7 @@ namespace Assets.Scripts.Entitys.Player.Base
     public class Player : Entity
     {
         // fields
-        [Header("Player")]  
+        [Header("Player")]
         // name
         [SerializeField] private string playerName;
         // list of achievements
@@ -20,7 +20,7 @@ namespace Assets.Scripts.Entitys.Player.Base
         // check if player has movement and a IPlayerCam attached
         private void Awake()
         {
-            if (GetComponent<IInputDevice>() == null)
+            /*if (GetComponent<IInputDevice>() == null)
             {
                 // throw error
                 throw new System.Exception("Player: " + playerName + " has no IInputDevice script attached");
@@ -30,11 +30,11 @@ namespace Assets.Scripts.Entitys.Player.Base
                 // throw error
                 throw new System.Exception("Player: " + playerName + " has no MovementBase script attached");
             }
-            if (GetComponent<IPlayerCam>() == null)
+            if (GetComponent<ICam>() == null)
             {
                 // throw error
                 throw new System.Exception("Player: " + playerName + " has no IPlayerCam script attached");
-            }
+            }*/
         }
 
     }

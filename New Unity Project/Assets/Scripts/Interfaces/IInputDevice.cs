@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Interfaces
 {
-    internal interface IInputDevice
+    public interface IInputDevice
     {
         // horizontal and vertical input
         float GetHorizontalInput();

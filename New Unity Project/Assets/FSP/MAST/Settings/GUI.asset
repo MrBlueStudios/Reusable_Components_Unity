@@ -16,8 +16,8 @@ MonoBehaviour:
     xzUnitSize: 1
     yUnitSize: 1
     cellCount: 50
-    gridHeight: 0
-    tintColor: {r: 1, g: 1, b: 1, a: 0.49803922}
+    gridHeight: 2
+    tintColor: {r: 0, g: 0, b: 0, a: 0.49803922}
   palette:
     bgColor: 0
     snapshotCameraPitch: 225

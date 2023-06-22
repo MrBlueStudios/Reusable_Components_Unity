@@ -1,11 +1,12 @@
 ﻿// third person camera unity
 
 using Assets.Scripts.Atributes;
+using Assets.Scripts.Interfaces;
 using UnityEngine;
 
 namespace Assets.Scripts.Views.Camera.Types
 {
-    public class ThirdPersonMovement : MonoBehaviour, IPlayerCam
+    public class ThirdPersonMovement : MonoBehaviour, ICam
     {
         [SerializeField] private float speed = 5f;
         [SerializeField] private float turnSmoothTime = 0.1f;
@@ -13,6 +14,10 @@ namespace Assets.Scripts.Views.Camera.Types
         private Rigidbody rb;
         private Transform cameraTransform;
         private float turnSmoothVelocity;
+
+        public Transform FollowTarget { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+        Transform ICam.FollowTarget { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+        IInputDevice ICam.InputDevice { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
         private void Start()
         {
@@ -41,7 +46,7 @@ namespace Assets.Scripts.Views.Camera.Types
     }
 
     // new third person cam
-    public class ThirdPersonCam2 : FaceTowards, IPlayerCam
+    public class ThirdPersonCam2 : FaceTowards, ICam
     {
         // header
         [Header("Camera Settings")][SerializeField]
@@ -53,6 +58,10 @@ namespace Assets.Scripts.Views.Camera.Types
 
         // private variables
         private Transform target;
+
+        public Transform FollowTarget { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+        Transform ICam.FollowTarget { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+        IInputDevice ICam.InputDevice { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
         // make a ThirdPersonCamera That uses the FaceTowards script to face the player(which is already made). The ThirdPersonCamera should also implement an interface called IPlayerCam 
 
