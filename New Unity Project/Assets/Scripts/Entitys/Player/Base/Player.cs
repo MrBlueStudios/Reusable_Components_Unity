@@ -12,7 +12,7 @@ namespace Assets.Scripts.Entitys.Player.Base
         // fields
         [Header("Player")]
         // name
-        [SerializeField] private string playerName;
+        [SerializeField] public string playerName;
         // list of achievements
         [SerializeField] private List<MyAchievement> achievements;
         

@@ -1,8 +1,8 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Assets.Scripts.HandelingCredits.TheCredits;
+using Assets.Scripts;
 
 public class CreditHandler : MonoBehaviour
 {
@@ -19,10 +19,15 @@ public class CreditHandler : MonoBehaviour
     }
 
     [SerializeField] private CreditType[] creditTypes;
-
+    private readonly ColorChange _colorChanger = new();
     // start
     private void Start()
     {
+        // thxplayer
+        ThanksPlayer thanksPlayer = new();
+        _colorChanger.ColChangeEffectTXT(thanksPlayer.ThxCredit(transform));
+
+
         // for each credit type in credit types make an child object and add text mesh pro text to it.
         foreach (CreditType creditType in creditTypes)
         {
@@ -44,7 +49,7 @@ public class CreditHandler : MonoBehaviour
             // set the color
             textMeshProUGUI.color = creditType.Color;
             // set how clear the text is
-            textMeshProUGUI.alpha = 
+            textMeshProUGUI.alpha = creditType.alpha;
             // set the size
             textMeshProUGUI.fontSize = creditType.Size;
             // set the alignment
@@ -56,9 +61,18 @@ public class CreditHandler : MonoBehaviour
         }
     }
 
+    
+
+
     // update
     private void Update()
     {
+        
+        // for each child in transform
+        // wait for 5 seconds
+        // remove the child
     }
     
+
+
 }
