@@ -7,7 +7,92 @@ using UnityEngine.UI;
 
 public class ButtonHandler : MonoBehaviour
 {
-    private Vector2 _screenSize;
+    private int _previousButton = 0;
+    private int _currentButton = 0;
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    public void StartGame()
+    {
+        // turn off all children and set time scale to 1
+        TurnOffChildren();
+        Time.timeScale = 1;
+    }
+
+    // main menu
+    public void MainMenu()
+    {
+        _previousButton = _currentButton;
+        _currentButton = 0;
+        // turn off all children and turn on main menu
+        TurnOffChildren();
+        TurnOnChild(_currentButton);
+        Time.timeScale = 0;
+    }
+
+
+    // pause game
+    public void PauseGame()
+    {
+        // turn on all children and set time scale to 0
+        TurnOffChildren();
+        TurnOnChild(1);
+        Time.timeScale = 0;
+        _previousButton = 1;
+    }
+
+    // open settings
+    public void OpenSettings()
+    {
+        _previousButton = _currentButton;
+        _currentButton = 2;
+        // turn off all children and turn on settings
+        TurnOffChildren();
+        TurnOnChild(_currentButton);
+    }
+
+    // open credits
+    public void OpenCredits()
+    {
+        // turn off all children and turn on credits
+        TurnOffChildren();
+        TurnOnChild(3);
+    }
+
+    // go back
+    public void GoBack()
+    {
+        // get the index of the child that is active go through all children and find the active one\
+        _currentButton = Array.IndexOf(transform.GetComponentsInChildren<Transform>(), transform.GetComponentInChildren<Transform>(true));
+
+        // turn off all children and turn on previous button
+        TurnOffChildren();
+        TurnOnChild(_previousButton);
+        _previousButton = _currentButton;
+    }
+
+    // turn on specific child
+    private void TurnOnChild(int childIndex)
+    {
+        // turn on specific child
+        transform.GetChild(childIndex).gameObject.SetActive(true);
+    }
+
+    // turn off all children
+    private void TurnOffChildren()
+    {
+        // turn off all children
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+    }
+
+
+
+/*    private Vector2 _screenSize;
 
     private List<GameObject> _buttons = new List<GameObject>();
 
@@ -75,5 +160,5 @@ public class ButtonHandler : MonoBehaviour
         // get the colors
 
 
-    }
+    }*/
 }

@@ -9,27 +9,76 @@ using Random = UnityEngine.Random;
 
 namespace Assets.Scripts
 {
-    using TMPro;
+    // auto add timer and textmeshpro
+    [RequireComponent(typeof(MyTimer))]
+    [RequireComponent(typeof(TextMeshProUGUI))]
+    public class ColorChange : MonoBehaviour
+    {
+        private TextMeshProUGUI textMeshPro;
+        private Color[] colors;
+        private int currentColorIndex;
+        private Color currentColor;
+        private MyTimer timer;
+
+        private void Start()
+        {
+            currentColorIndex = 0;
+            textMeshPro = GetComponent<TextMeshProUGUI>();
+            colors = GetRandomColors(5);
+            timer = GetComponent<MyTimer>();
+            timer.OnTimerTick += ChangeColor;
+            timer.StartTimer(1f);
+        }
+
+        private void OnDestroy()
+        {
+            timer.OnTimerTick -= ChangeColor;
+            timer.StopTimer();
+        }
+
+        private void ChangeColor()
+        {
+            currentColorIndex = (currentColorIndex + 1) % colors.Length;
+            textMeshPro.color = colors[currentColorIndex];
+        }
+
+        private Color[] GetRandomColors(int count)
+        {
+            Color[] colors = new Color[count];
+            for (int i = 0; i < count; i++)
+            {
+                colors[i] = new Color(Random.value, Random.value, Random.value);
+            }
+            Debug.Log("Color: " + colors[0] + " " + colors[1] + " " + colors[2] + " " + colors[3] + " " + colors[4]);
+            return colors;
+        }
+    }
+    /*using TMPro;
     using UnityEngine;
 
-    public class ColorChange
+    public class ColorChange : MonoBehaviour
     {
         private TextMeshProUGUI tMPGUI;
         private MyTimer _myTimer;
+
+        private event Action _onColorChange = delegate { };
 
         public void ColChangeEffectTXT(TextMeshProUGUI textMeshProUGUI)
         {
             tMPGUI = textMeshProUGUI;
 
             // Start the color off randomly
-            tMPGUI.color = new Color32((byte)Random.Range(0, 255), (byte)Random.Range(0, 255), (byte)Random.Range(0, 255), 255);
+            textMeshProUGUI.color = new Color32(255, 128, 0, 255);
 
             _myTimer = new MyTimer();
             _myTimer.OnTimerEnd += UpdateColor;
-            _myTimer.StartTimer(Random.Range(10, 16)); // Start the timer for a random duration between 10 and 15 seconds
+            // start timer for 3 seconds
+            _myTimer.StartTimer(3);
+            _myTimer.TogleRepeat();
+            Debug.Log("ColorChangeTimerStarted");
         }
 
-        private void UpdateColor()
+       public void UpdateColor()
         {
             Debug.Log("ColorUpdate");
             if (tMPGUI == null)
@@ -38,18 +87,19 @@ namespace Assets.Scripts
             }
 
             // Update the color
-            tMPGUI.color = new Color32(GetNewColorValue((byte)tMPGUI.color.r), GetNewColorValue((byte)tMPGUI.color.g), GetNewColorValue((byte)tMPGUI.color.b), 255);
+            tMPGUI.color = new Color (GetNewColorValue((byte)tMPGUI.color.r), GetNewColorValue((byte)tMPGUI.color.g), GetNewColorValue((byte)tMPGUI.color.b), (byte)1f);
 
             // Start a new timer for the next color change
-            _myTimer.StartTimer(Random.Range(10, 16)); // Start the timer for a random duration between 10 and 15 seconds
+            _myTimer.StartTimer(Random.Range(0, 10)); // Start the timer for a random duration between 10 and 15 seconds
         }
 
         private byte GetNewColorValue(byte currentValue)
         {
             // If the current color value is 255 or higher, set it to 0; otherwise, increment it by 1
-            return currentValue >= 255 ? (byte)0 : (byte)(currentValue + 1);
+            return currentValue += (byte)1;
         }
-    }
+
+    }*/
     /* public class ColorChange
      {
          private TextMeshProUGUI tMPGUI;

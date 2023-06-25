@@ -26,11 +26,11 @@ namespace Assets.Scripts.HandelingCredits.TheCredits
             childObject.layer = 5;
             // set rect transform
             childObject.AddComponent<RectTransform>();
-            // width is 67,7% of screen width
-            // height is 4,629% of screen height
-            childObject.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width * 0.677f, Screen.height * 0.05901f);
+            childObject.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width * 0.677f, Screen.height * 0.06f);
             // add text mesh pro text to it
             TextMeshProUGUI textMeshProUGUI = childObject.AddComponent<TextMeshProUGUI>();
+            // add colorchange to thanksplayer
+            childObject.AddComponent<ColorChange>();
             // set the font style
             textMeshProUGUI.fontStyle = FontStyles.Bold;
             // get random color
@@ -41,16 +41,16 @@ namespace Assets.Scripts.HandelingCredits.TheCredits
             // set the size
             textMeshProUGUI.fontSize = 50;
             // set the text
-            textMeshProUGUI.text = "Special thanks to: " + player.playerName;
+            textMeshProUGUI.text = "Special thanks to: " + player.MyName;
             // set the alignment
-            textMeshProUGUI.alignment = TextAlignmentOptions.Center;
+            textMeshProUGUI.alignment = TextAlignmentOptions.Bottom;
             // set the material
-            textMeshProUGUI.fontMaterial = Resources.Load<Material>("Fonts & Materials/LiberationSans SDF");
+            textMeshProUGUI.font = Resources.Load<TMP_FontAsset>("Fonts & Materials/ARIAL SDF");
             // set the parent
             childObject.transform.SetParent(transform);
             return textMeshProUGUI;
         }
-        public TextMeshProUGUI ThxCredit(Transform parent)
+        public void ThxCredit(Transform parent)
         {
             // find player
             Player player = FindObjectOfType<Player>(); if (player == null) throw new Exception("Player not found");
@@ -62,14 +62,13 @@ namespace Assets.Scripts.HandelingCredits.TheCredits
             childObject.AddComponent<RectTransform>();
             // width is 67,7% of screen width
             // height is 4,629% of screen height
-            childObject.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width * 0.677f, Screen.height * 0.05901f);
+            childObject.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width * 0.677f, Screen.height * 0.06f);
             // add text mesh pro text to it
             TextMeshProUGUI textMeshProUGUI = childObject.AddComponent<TextMeshProUGUI>();
-            
+            // add colorchange to thanksplayer
+            childObject.AddComponent<ColorChange>();
             // set the material
-            textMeshProUGUI.fontMaterial = Resources.Load<Material>("Fonts & Materials/LiberationSans SDF");
-            // set the font style
-            textMeshProUGUI.fontStyle = FontStyles.Bold;
+            textMeshProUGUI.font = Resources.Load<TMP_FontAsset>("Fonts & Materials/CassandraPersonalUseRegular-3BjG SDF");
             
             // set how clear the text is
             textMeshProUGUI.alpha = 1;
@@ -78,7 +77,7 @@ namespace Assets.Scripts.HandelingCredits.TheCredits
             // auto size on
             textMeshProUGUI.enableAutoSizing = true;
             // set the text
-            textMeshProUGUI.text = "Special thanks to: " + player.playerName;
+            textMeshProUGUI.text = "Special thanks to: " + player.MyName;
             // set the alignment
             textMeshProUGUI.alignment = TextAlignmentOptions.Center;
             
@@ -87,8 +86,6 @@ namespace Assets.Scripts.HandelingCredits.TheCredits
 
             // set the color
             textMeshProUGUI.color = Color.black;
-
-            return textMeshProUGUI;
         }
     }
 }
