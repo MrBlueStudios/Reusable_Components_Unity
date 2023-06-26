@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Movement
 {
-    internal class MovementBase : MonoBehaviour
+    public class MovementBase : MonoBehaviour
     {
         [SerializeField] protected float speed = 12f;
 
@@ -34,7 +34,7 @@ namespace Assets.Scripts.Movement
         }
 
         // move
-        protected virtual void Move(Vector2 moveInput)
+        public virtual void Move(Vector2 moveInput)
         {
 
         }

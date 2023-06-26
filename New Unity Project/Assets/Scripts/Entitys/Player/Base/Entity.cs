@@ -20,7 +20,7 @@ namespace Assets.Scripts.Entitys.Player.Base
         [SerializeField] private Collider collider;
         // health
         [Header("Entity Health")]
-        [SerializeField] private Health health;
+        [SerializeField] protected Health health;
 
     }
 }

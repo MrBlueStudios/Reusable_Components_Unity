@@ -24,7 +24,7 @@ namespace Assets.Scripts.Atributes
                 OnHealthChanged?.Invoke(health);
             }
         }
-
+        
         protected float MaxHealth
         {
             get => maxHealth;
@@ -58,13 +58,13 @@ namespace Assets.Scripts.Atributes
         }
 
         // methods
-        protected void Heal(float amount)
+        public void Heal(float amount)
         {
             HealthValue += amount;
             HealthValue = Mathf.Clamp(HealthValue, 0f, MaxHealth);
         }
             
-        protected void Damage(float amount)
+        public void Damage(float amount)
         {
             HealthValue -= amount;
             HealthValue = Mathf.Clamp(HealthValue, 0f, MaxHealth);

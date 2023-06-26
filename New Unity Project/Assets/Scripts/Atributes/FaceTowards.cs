@@ -12,7 +12,7 @@ namespace Assets.Scripts.Atributes
         // header
         [Header("Object to face")]
         [SerializeField] private Transform target;
-
+        
         private void LateUpdate()// late 
         {
             if (target != null)

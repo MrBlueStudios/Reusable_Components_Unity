@@ -97,7 +97,7 @@ internal class FirstPersonMovement : MovementBase
     }*/
 
     // move player
-    protected override void Move(Vector2 moveInput)
+    public override void Move(Vector2 moveInput)
     {
         // calculate direction
         moveDirection = orientation.forward * moveInput.y + orientation.right * moveInput.x;
