@@ -19,9 +19,12 @@ public class CreditHandler : MonoBehaviour
         [Range(0, 1)]
         [SerializeField] public float alpha;
         [SerializeField] public float Size;
-    }
+        [SerializeField] private CreditType[] creditTypes;
 
+    }
     [SerializeField] private CreditType[] creditTypes;
+
+    
 
     private ThanksPlayer thanksPlayer;
     // start

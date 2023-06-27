@@ -22,5 +22,6 @@ namespace Assets.Scripts.Entitys.Player.Base
         [Header("Entity Health")]
         [SerializeField] protected Health health;
 
+        
     }
 }

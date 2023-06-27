@@ -12,6 +12,6 @@ namespace Assets.Scripts.Interfaces
         void Interact();
 
         // an IInteractable needs to have an InteractionArea
-        InteractionArea InteractionArea { get; set; }
+        //InteractionArea InteractionArea { get; set; }
     }
 }
