@@ -15,7 +15,7 @@ namespace Assets.Scripts.Interaction
         private void OnDrawGizmosSelected()
         {
             // Draw a gizmo of a sphere to represent the interaction area
-            Gizmos.color = Color.yellow;
+            Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, interactionRange);
         }
         // while in the interaction area

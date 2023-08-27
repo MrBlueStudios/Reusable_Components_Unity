@@ -20,6 +20,7 @@ public class DialogueManager : MonoBehaviour
         // Initialize the static instance of the DialogueManager class
         Instance = this;
         sentences = new Queue<string>();
+        Debug.Log("DialogueManager initialized");
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -52,7 +53,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-          // Implement the end of the dialogue
+        // Implement the end of the dialogue
         Debug.Log("End of dialogue");
     }
 }

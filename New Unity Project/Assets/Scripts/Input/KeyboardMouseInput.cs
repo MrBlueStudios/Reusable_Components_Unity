@@ -21,7 +21,7 @@ namespace Assets.Scripts.Input
         // getjump
         public bool GetJumpInput()
         {
-            return Input.GetButtonDown("JumpKey");
+            return Input.GetButtonDown("Jump");
         }
 
         // getattack
